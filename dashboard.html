@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Dashboard - Computer Science & Technology</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav {
+      background-color: #343a40;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0084f1ff;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    #main-content {
+      margin: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Dashboard</h1>
+    <p>Computer Department - Faridpur Polytechnic Institute</p>
+  </header>
+
+  <nav>
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+    <a href="#"><i class="fas fa-calendar"></i> Students</a>
+    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="#"><i class="fas fa-code"></i> Developer</a>
+    <a href="#"><i class="fas fa-sign-in-alt"></i> Logout</a>
+  </nav>
+
+  <section class="dashboard">
+    <div class="card" onclick="showContent('subjects')">
+      <i class="fas fa-book"></i>
+      <h3>My Subjects</h3>
+      <p>View all subjects and class materials.</p>
+    </div>
+
+    <div class="card" onclick="showContent('routine')">
+      <i class="fas fa-calendar-alt"></i>
+      <h3>Class Routine</h3>
+      <p>Check your weekly class schedule.</p>
+    </div>
+
+    <div class="card" onclick="showContent('results')">
+      <i class="fas fa-file"></i>
+      <h3>Results</h3>
+      <p>View your academic performance and exam results.</p>
+    </div>
+
+    <div class="card" onclick="showContent('notices')">
+      <i class="fas fa-envelope"></i>
+      <h3>Important Notices</h3>
+      <p>Receive updates from teachers and administration.</p>
+    </div>
+
+    <div class="card" onclick="showContent('profile')">
+      <i class="fas fa-user-circle"></i>
+      <h3>My Profile</h3>
+      <p>View and edit your personal information.</p>
+    </div>
+  </section>
+
+  <div id="main-content">
+    <h2>Welcome</h2>
+    <p>Click on a card to view more details.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Computer Science & Technology Department - Faridpur Polytechnic Institute. All Rights Reserved.
+  </footer>
+
+  <script>
+    function showContent(section) {
+      let content = '';
+      switch(section) {
+        case 'subjects':
+          content = '<h2>My Subjects</h2><p>Here are your subjects and class materials.</p>';
+          break;
+        case 'routine':
+          content = `
+            <h2 style="text-align: center;">Faridpur Polytechnic Institute.<br>
+              Class Routine - CST (6th Semester, Shift 2, Group A)</h2>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>1<br>(1:30 - 2:15)</th>
+                  <th>2<br>(2:15 - 3:00)</th>
+                  <th>3<br>(3:00 - 3:45)</th>
+                  <th>4<br>(3:45 - 4:30)</th>
+                  <th>5<br>(4:30 - 5:15)</th>
+                  <th>6<br>(5:15 - 6:00)</th>
+                  <th>7<br>(6:00 - 6:45)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SUN</td>
+                  <td>x</td>
+                  <td>28563<br>TH<br>Com-101</td>
+                  <td colspan="2">28564<br>TH<br>NL</td>
+              
+                  <td>28565<br>AR<br>Com-301</td>
+                  <td colspan="2">28561<br>SI<br>SL-3</td>
+                
+                </tr>
+                <tr>
+                  <td>MON</td>
+                  <td>28564<br>TH<br>Com-301</td>
+                  <td>28562<br>MA<br>Com-301</td>
+                  <td>28561<br>SI<br>Com-301</td>
+                  <td>25851<br>TTS<br>Com-301</td>
+                  <td colspan="3">28563<br>TH<br>DL</td>
+                
+                  
+                </tr>
+                <tr>
+                  <td>TUE</td>
+                  <td colspan="3">28565<br>AR<br>DL</td>
+                  <td>25852<br>TTS<br>Com-301</td>
+                  <td colspan="3">28562<br>MA<br>NL</td>
+                </tr>
+                <tr>
+                  <td>WED</td>
+                  <td>x</td>
+                  <td>28562<br>MA<br>Com-301</td>
+                  <td colspan="2">28566<br>SI<br>SL-1</td>
+                  <td>28564<br>TH<br>Com-301</td>
+                  <td>x</td>
+                  <td>x</td>
+                </tr>
+                <tr>
+                  <td>THU</td>
+                  <td>28561<br>SI<br>Com-301</td>
+                  <td>25852<br>TTS<br>Com-301</td>
+                  <td>25851<br>TTS<br>Com-301</td>
+                  <td>28563<br>TH<br>Com-301</td>
+                  <td colspan="3">28564<br>TH<br>SI-3</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br><h2 style="text-align: center;">Subject List</h2>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Sl. No</th>
+                  <th>Code</th>
+                  <th>Name of the Subject</th>
+                  <th>T</th>
+                  <th>P</th>
+                  <th>C</th>
+                  <th>TC</th>
+                  <th>TF</th>
+                  <th>PC</th>
+                  <th>PF</th>
+                  <th>Total</th>
+                  <th>Teacher's Name</th>
+                  <th>In-Short</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>25851</td>
+                  <td>Principal of Marketing</td>
+                  <td>2</td>
+                  <td>-</td>
+                  <td>2</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>100</td>
+                  <td>Tania Tazin Suborna</td>
+                  <td>TTS</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>25852</td>
+                  <td>Industrial Management</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>100</td>
+                  <td>Tania Tazin Suborna</td>
+                  <td>TTS</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>25561</td>
+                  <td>Database Management System</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>150</td>
+                  <td>Shahanur Islam</td>
+                  <td>SI</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>25562</td>
+                  <td>Computer Networking</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>150</td>
+                  <td>Mazharul Amin</td>
+                  <td>MA</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>25863</td>
+                  <td>Sensor & lol System</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>150</td>
+                  <td>Tanvir Hossain</td>
+                  <td>TH</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>25864</td>
+                  <td>Microcontroller Based System Design & Development</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>40</td>
+                  <td>60</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>200</td>
+                  <td>Tanvir Hossain</td>
+                  <td>TH</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>25865</td>
+                  <td>Surveillance Security System</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>20</td>
+                  <td>30</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>100</td>
+                  <td>Aftabur Rahman</td>
+                  <td>AR</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>25866</td>
+                  <td>Web Development Project</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>50</td>
+                  <td>Shahanur Islam</td>
+                  <td>SI</td>
+                </tr>
+
+              </tbody>
+            </table>
+          `;
+          break;
+        case 'results':
+          content = '<h2>Results</h2><p>Here are your academic performance and exam results.</p>';
+          break;
+        case 'notices':
+          content = '<h2>Important Notices</h2><p>Here are updates from teachers and administration.</p>';
+          break;
+        case 'profile':
+          content = '<h2>My Profile</h2><p>Here is your personal information.</p>';
+          break;
+        default:
+          content = '<h2>Welcome</h2><p>Click on a card to view more details.</p>';
+      }
+      document.getElementById('main-content').innerHTML = content;
+    }
+  </script>
+
+</body>
+</html>

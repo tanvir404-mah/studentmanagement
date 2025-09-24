@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teachers Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #33add9ff;
+        }
+.container {
+      max-width: auto;
+      max-height: auto;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        /* Head teacher styling */
+        .head-teacher {
+          text-color: #c8ff00ff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .head-teacher img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .head-teacher h2 {
+            margin: 15px 0 5px;
+        }
+
+        .head-teacher p {
+            color: #fb0b0bff;
+        }
+
+        /* Teacher grid for others */
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .teacher-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .teacher-card h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .teacher-card p {
+            font-size: 14px;
+            color: #080808ff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1 align="center" style="color: #0055ffff;">Our Teachers Panel</h1>
+    <p align="center" style="color: #0b3ffbff;">Department of Computer Science & Technology</p>
+
+
+        <!-- ✅ Head Teacher -->
+        <div class="head-teacher">
+            <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg"
+             alt="Head Teacher">
+            <h2>Engr. Md. Akkas Ali Sheikh</h2>
+            <p>Principal of the Institute.</p>
+        </div>
+
+  
+
+    <!-- ✅ Other Teachers -->
+    <div class="teacher-grid">
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg" alt="Teacher 1">
+            <div>
+                <h3>Engr. Reshedul Islam</h3>
+                <p>Chief Instructor, Computer Science</p>
+                <p>Email: reshedul@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/696996/pexels-photo-696996.jpeg" alt="Teacher 2">
+            <div>
+                <h3>Engr. Anisur Rahman Sarker</h3>
+                <p>Instructor, Computer Science</p>
+                <p>Email: anisur@example.com</p>
+                <p>Phone: 987-654-3210</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/64221/flower-sunflower-karnataka-india-64221.jpeg" alt="Teacher 3">
+            <div>
+                <h3>Aftabur Rahaman</h3>
+                <p>Instructor, Computer Science</p>
+                <p>Email: aftabur@example.com</p>
+                <p>Phone: 555-123-4567</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/850359/pexels-photo-850359.jpeg" alt="Teacher 4" style="border-radius: 40px;">
+            <div>
+                <h3>Sahanur Islam</h3>
+                <p>Junior Instructor, Computer Science</p>
+                <p>Email: sahanur@example.com</p>
+                <p>Phone: 555-987-6543</p>
+            </div>
+        </div>
+    <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/132468/pexels-photo-132468.jpeg" alt="Teacher 4" style="border-radius: 40px;">
+            <div>
+                <h3>Al-Amin</h3>
+                <p>Junior Instructor, Computer Science</p>
+                <p>Email: alamin@example.com</p>
+                <p>Phone: 555-321-6789</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/53135/hydrangea-blossom-bloom-flower-53135.jpeg" alt="Teacher 4" style="border-radius: 40px;">
+            <div>
+                <h3>Tanvir Hassan</h3>
+                <p>Junior Instructor, Computer Science</p>
+                <p>Email: tanvir@example.com</p>
+                <p>Phone: 555-654-3210</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="https://images.pexels.com/photos/458886/pexels-photo-458886.jpeg" alt="Teacher 4" style="border-radius: 40px;">
+            <div>
+                <h3>Demo Teacher</h3>
+                <p>Junior Instructor, Computer Science</p>
+                <p>Email: demo@example.com</p>
+                <p>Phone: 555-000-0000</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="https://media.istockphoto.com/id/1370630918/photo/purple-magnolia-flower-magnolia-felix-isolated-on-white-background-with-clipping-path.webp?s=1024x1024&w=is&k=20&c=N6VCI8zW74QoqqoKqxDe0gwoZtZLJbdW3pEAIIHmhl8="
+             alt="Teacher 4" style="border-radius: 40px;">
+            <div>
+                <h3>Hassan</h3>
+                <p>Junior Instructor, Computer Science</p>
+                <p>Email: hassan@example.com</p>
+                <p>Phone: 555-111-2222</p>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <button onclick="history.back()"> Go Back</button>
+</div>
+
+<footer>
+    <p align="center" style="padding: 15px; color: white;">&copy; 2025 Department of Computer Science & Technology, Faridpur Polytechnic Institute</p>
+</footer>
+</body>
+</html>
