@@ -1,11 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Student Management System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Computer Department | Faridpur Polytechnic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .notice-bar {
+  background: #007bff;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.notice-text {
+    color: #ffffffff;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    nav {
+      background-color: #343a40;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0084f1ff;
+    }
+
+    .hero {
+      background: url('https://scontent.fdac41-1.fna.fbcdn.net/v/t1.6435-9/153063183_10222266669728704_3156353897799525356_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=2285d6&_nc_ohc=NWimEF8GGXYQ7kNvwGkpR28&_nc_oc=Adk3G8Lx1pFVWKTsvCrQiZnnQgzShGBfchZbuffC1H69BiHghFFXJOy4hqUV1hIXBu8&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=VXQCFO8KWwPBRrTZghnQlA&oh=00_AfaMBsb5mZgS8SUjkZMNFSeWGsXR-1muclJG3lHrSFy8Gg&oe=68EA6D74') 
+      no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+ 
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .content h3 {
+      font-size: 26px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .feature-box {
+      background-color: white;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature-box:hover {
+  transform: scale(2.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  border: 1px solid #007bff;
+}
+
+    .feature-box i {
+      font-size: 36px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Student Management System</h1>
-  <p>Manage students, view results, and more.</p>
+
+  <header>
+    <h1>Computer Department</h1>
+    <p>Faridpur Polytechnic Institute</p>
+    <div class="notice-bar">
+  <div class="notice-text">
+    📢 Latest Notice: Class started from 1st September. Collect your class routine from the department.
+  </div>
+  </header>
+
+<nav>
+    <a href="home.html"><i class="fas fa-home"></i> Home</a>
+    <a href="{% url 'teacher' %}" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+    <a href="{% url 'student' %}" class="nav-link"><i class="fas fa-calendar"></i> Student's</a>
+    <a href="{% url 'contact' %}" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="{% url 'developer' %}" class="nav-link"><i class="fas fa-code"></i> Developer's</a>
+    <a href="{% url 'login' %}" class="nav-link"><i class="fas fa-sign-in-alt"></i> Register</a>
+
+  </nav>
+
+  <section class="hero">
+    <h2> Future IT Engineering</h2>
+  </section>
+
+  <section class="content">
+    <h3>Welcome to the Department of Computer Science & Technology</h3>
+    <p>
+      Our mission is to produce skilled computer engineers equipped with the latest knowledge in software, hardware, and networking. At Faridpur Polytechnic Institute, we provide modern lab facilities, experienced faculty, and an industry-focused curriculum to prepare students for successful careers in ICT.
+    </p>
+
+
+    <div class="features">
+      <div class="feature-box">
+        <i class="fas fa-laptop-code"></i>
+        <h4>Our Teacher's</h4>
+        <p>Highly qualified and experienced faculty members.</p>
+      </div>
+
+
+      <div class="feature-box">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h4>Our Classroom</h4>
+        <p>Spacious and well-equipped classrooms for effective learning.</p>
+      </div>
+
+
+      <div class="feature-box">
+        <i class="fas fa-network-wired"></i>
+        <h4>Modern Labs</h4>
+        <p>Advanced computer labs for networking, programming, and so on.</p>
+      </div>
+
+
+        <div class="feature-box">
+            <i class="fas fa-book"></i>
+            <h4> Curriculum </h4>
+            <p>Download your curriculum.</p>
+    </div>
+
+    
+ <div class="feature-box">
+            <i class="fas fa-trophy"></i>
+            <h4>Student's Success</h4>
+            <p>Our students have a track record of success in national and international competitions.</p>
+        </div>
+
+        <div class="feature-box">
+            <i class="fas fa-briefcase"></i>
+            <h4>Internship Opportunities</h4>
+            <p>Partnerships with leading IT companies for real-world experience.</p>
+        </div>
+       
+  </section>
+
+  <footer>
+    &copy; 2025 Computer Department, Faridpur Polytechnic Institute. All rights reserved.
+  </footer>
+
 </body>
 </html>
